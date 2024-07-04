@@ -9,5 +9,5 @@
 
 ## Cases
 * [Overview](cases/overview.md)
-    * [Case com Feast](cases/feast/feast_fs.md)
-    * [Case com MLRun](cases/mlrun/mlrun_fs.md)
+* [Case com Feast](cases/feast/feast_fs.md)
+* [Case com MLRun](cases/mlrun/mlrun_fs.md)

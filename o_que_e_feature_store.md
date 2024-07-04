@@ -22,7 +22,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
   <table style="font-size: 10px;">
     <thead>
       <tr>
-        <th>Categoria</th>
+        <th style="white-space: nowrap;">Categoria</th>
         <th>Feast</th>
         <th>Tecton</th>
         <th>MLRun</th>
@@ -34,7 +34,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
     </thead>
     <tbody>
       <tr>
-        <td>Open source</td>
+        <td style="white-space: nowrap;">Open source</td>
         <td>Sim</td>
         <td>Não</td>
         <td>Sim</td>
@@ -44,7 +44,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Opção gerenciada</td>
+        <td style="white-space: nowrap;">Opção gerenciada</td>
         <td>Não</td>
         <td>principais clouds</td>
         <td>cloud + on-prem</td>
@@ -54,7 +54,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>cloud + on-prem</td>
       </tr>
       <tr>
-        <td>Pipelines offline</td>
+        <td style="white-space: nowrap;">Pipelines offline</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -64,7 +64,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Pipelines em tempo real</td>
+        <td style="white-space: nowrap;">Pipelines em tempo real</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -74,7 +74,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Não</td>
       </tr>
       <tr>
-        <td>Recuperação de features</td>
+        <td style="white-space: nowrap;">Recuperação de features</td>
         <td>Sim</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -84,7 +84,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Engines</td>
+        <td style="white-space: nowrap;">Engines</td>
         <td>Spark</td>
         <td>Spark</td>
         <td>Python, Dask, Spark, Nuclio</td>
@@ -94,7 +94,8 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Spark, Flink</td>
       </tr>
       <tr>
-        <td>Análise de features</td>
+        <td style="white-space: nowrap;">Análise de features</td>
+        <td>Spark</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -104,7 +105,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Versionamento e linhagem</td>
+        <td style="white-space: nowrap;">Versionamento e linhagem</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -114,7 +115,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Segurança das features</td>
+        <td style="white-space: nowrap;">Segurança das features</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -124,7 +125,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Não</td>
       </tr>
       <tr>
-        <td>Monitoramento</td>
+        <td style="white-space: nowrap;">Monitoramento</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -134,7 +135,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Treinamento e serving, integrado e automatizado</td>
+        <td style="white-space: nowrap;">Treinamento e serving, integrado e automatizado</td>
         <td>Não</td>
         <td>Não</td>
         <td>Sim</td>

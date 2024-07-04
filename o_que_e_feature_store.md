@@ -19,130 +19,129 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store.
 
 <div style="display: flex; justify-content: center;">
-  <table style="font-size: 8px;">
+  <table style="font-size: 10px; border-collapse: collapse;">
     <thead>
       <tr>
-        <th style="white-space: nowrap;">Categoria</th>
-        <th>Feast</th>
-        <th>Tecton</th>
-        <th>MLRun</th>
-        <th>SageMaker</th>
-        <th>Vertex AI</th>
-        <th>Databricks</th>
-        <th>HopsWorks</th>
+        <th style="border: 1px solid black; padding: 5px;">Categoria</th>
+        <th style="border: 1px solid black; padding: 5px;">Feast</th>
+        <th style="border: 1px solid black; padding: 5px;">Tecton</th>
+        <th style="border: 1px solid black; padding: 5px;">MLRun</th>
+        <th style="border: 1px solid black; padding: 5px;">SageMaker</th>
+        <th style="border: 1px solid black; padding: 5px;">Vertex AI</th>
+        <th style="border: 1px solid black; padding: 5px;">Databricks</th>
+        <th style="border: 1px solid black; padding: 5px;">HopsWorks</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="white-space: nowrap;">Open source</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Open source</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Opção gerenciada</td>
-        <td>Não</td>
-        <td>principais clouds</td>
-        <td>cloud + on-prem</td>
-        <td>na AWS</td>
-        <td>na GCP</td>
-        <td>principais clouds</td>
-        <td>cloud + on-prem</td>
+        <td style="border: 1px solid black; padding: 5px;">Opção gerenciada</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">principais clouds</td>
+        <td style="border: 1px solid black; padding: 5px;">cloud + on-prem</td>
+        <td style="border: 1px solid black; padding: 5px;">na AWS</td>
+        <td style="border: 1px solid black; padding: 5px;">na GCP</td>
+        <td style="border: 1px solid black; padding: 5px;">principais clouds</td>
+        <td style="border: 1px solid black; padding: 5px;">cloud + on-prem</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Pipelines offline</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Pipelines offline</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Pipelines em tempo real</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Pipelines em tempo real</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Recuperação de features</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Recuperação de features</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Engines</td>
-        <td>Spark</td>
-        <td>Spark</td>
-        <td>Python, Dask, Spark, Nuclio</td>
-        <td>Nenhum</td>
-        <td>Spark</td>
-        <td>Spark</td>
-        <td>Spark, Flink</td>
+        <td style="border: 1px solid black; padding: 5px;">Engines</td>
+        <td style="border: 1px solid black; padding: 5px;">Spark</td>
+        <td style="border: 1px solid black; padding: 5px;">Spark</td>
+        <td style="border: 1px solid black; padding: 5px;">Python, Dask, Spark, Nuclio</td>
+        <td style="border: 1px solid black; padding: 5px;">Nenhum</td>
+        <td style="border: 1px solid black; padding: 5px;">Spark</td>
+        <td style="border: 1px solid black; padding: 5px;">Spark</td>
+        <td style="border: 1px solid black; padding: 5px;">Spark, Flink</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Análise de features</td>
-        <td>Spark</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Análise de features</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Versionamento e linhagem</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Versionamento e linhagem</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Segurança das features</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Segurança das features</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Monitoramento</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Monitoramento</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
       <tr>
-        <td style="white-space: nowrap;">Treinamento e serving, integrado e automatizado</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Não</td>
-        <td>Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Treinamento e serving, integrado e automatizado</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Não</td>
+        <td style="border: 1px solid black; padding: 5px;">Sim</td>
       </tr>
     </tbody>
   </table>
@@ -150,6 +149,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
 <div style="display: flex; justify-content: center; margin-top: 10px;">
   <p>Fonte: <a href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a></p>
 </div>
+
 
 ## Feature Store na Arquitetura do Sistema de ML
 

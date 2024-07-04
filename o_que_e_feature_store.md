@@ -19,7 +19,7 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store.
 
 <div style="display: flex; justify-content: center;">
-  <table>
+  <table style="font-size: 10px;">
     <thead>
       <tr>
         <th>Categoria</th>
@@ -34,7 +34,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
     </thead>
     <tbody>
       <tr>
-        <td>Código aberto</td>
+        <td>Open source</td>
         <td>Sim</td>
         <td>Não</td>
         <td>Sim</td>
@@ -74,7 +74,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Não</td>
       </tr>
       <tr>
-        <td>Recuperação de características</td>
+        <td>Recuperação de features</td>
         <td>Sim</td>
         <td>Sim</td>
         <td>Sim</td>
@@ -94,7 +94,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
         <td>Spark, Flink</td>
       </tr>
       <tr>
-        <td>Análise de características</td>
+        <td>Análise de features</td>
         <td>Não</td>
         <td>Sim</td>
         <td>Sim</td>

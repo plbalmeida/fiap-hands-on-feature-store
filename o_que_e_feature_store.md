@@ -19,7 +19,7 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store.
 
 <div style="display: flex; justify-content: center;">
-  <table style="font-size: 10px;">
+  <table style="font-size: 8px;">
     <thead>
       <tr>
         <th style="white-space: nowrap;">Categoria</th>

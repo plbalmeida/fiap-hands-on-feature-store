@@ -19,17 +19,17 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store.
 
 <div align="center">
-  <table style="font-size: 10px; text-align: center;">
+  <table style="font-size: 10px; text-align: center; width: 100%;">
     <thead>
       <tr>
-        <th style="padding: 5px;">Categoria</th>
-        <th style="padding: 5px;">Feast</th>
-        <th style="padding: 5px;">Tecton</th>
-        <th style="padding: 5px;">MLRun</th>
-        <th style="padding: 5px;">SageMaker</th>
-        <th style="padding: 5px;">Vertex AI</th>
-        <th style="padding: 5px;">Databricks</th>
-        <th style="padding: 5px;">HopsWorks</th>
+        <th style="padding: 5px; width: 12%;">Categoria</th>
+        <th style="padding: 5px; width: 12%;">Feast</th>
+        <th style="padding: 5px; width: 12%;">Tecton</th>
+        <th style="padding: 5px; width: 12%;">MLRun</th>
+        <th style="padding: 5px; width: 12%;">SageMaker</th>
+        <th style="padding: 5px; width: 12%;">Vertex AI</th>
+        <th style="padding: 5px; width: 12%;">Databricks</th>
+        <th style="padding: 5px; width: 12%;">HopsWorks</th>
       </tr>
     </thead>
     <tbody>

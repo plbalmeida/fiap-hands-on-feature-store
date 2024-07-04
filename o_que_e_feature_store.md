@@ -18,7 +18,9 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 
 Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store.
 
-<div style="display: flex; justify-content: center;">
+<!-- <div style="display: flex; justify-content: center;"> -->
+
+<div align="center">
   <table style="font-size: 10px;">
     <thead>
       <tr>
@@ -146,7 +148,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
     </tbody>
   </table>
 </div>
-<div style="display: flex; justify-content: center; margin-top: 10px;">
+<div align="center">
   <p>Fonte: <a href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a></p>
 </div>
 

@@ -147,7 +147,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
   </table>
 </div>
 <div align="center">
-  <p style="font-size: 10px;">Fonte: <a href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a></p>
+  <p style="font-size: 12px;">Fonte: <a href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a></p>
 </div>
 
 ## Feature Store na Arquitetura do Sistema de ML
@@ -157,8 +157,8 @@ A figura a seguir ilustra a arquitetura ideal e membros do time que normalmente 
 <div align="center">
   <figure>
     <img src="fs_ml_system.png" alt="Feature Store no sistema de ML">
-    <figcaption>
-      Fonte: <a href=href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a>
+    <figcaption style="font-size: 12px; font-weight: bold;">
+      Fonte: <a href="https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/" style="font-size: 14px; font-weight: bold;">Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023</a>
     </figcaption>
   </figure>
 </div>
@@ -186,8 +186,8 @@ Embora um Data Warehouse tradicional e um Feature Store centralizarem dados de v
 <div align="center">
   <figure>
     <img src="dw_versus_fs.png" alt="Data Warehouse X Feature Store">
-    <figcaption>
-      Fonte: <a href="https://paiml.com/docs/home/books/practical-mlops/"> Noah Gift, Alfredo Deza. Practical Mlops - Operationalizing Machine Learning Models. O'Reilly Media, Inc. 2021</a>
+    <figcaption style="font-size: 12px; font-weight: bold;">
+      Fonte: <a href="https://paiml.com/docs/home/books/practical-mlops/" style="font-size: 14px; font-weight: bold;">Noah Gift, Alfredo Deza. Practical Mlops - Operationalizing Machine Learning Models. O'Reilly Media, Inc. 2021</a>
     </figcaption>
   </figure>
 </div>

@@ -16,136 +16,21 @@ O Feature Store é um recurso no sistema de ML que possibilita a automatização
 
 ## Provedores de Feature Store
 
-Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store (Fonte: [Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023](https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/)).
+Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store (Adaptado de: [Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023](https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/)).
 
-<div align="center">
-  <table style="font-size: 10px; text-align: center; width: 100%;">
-    <thead>
-      <tr>
-        <th style="padding: 5px; width: 12%;">Categoria</th>
-        <th style="padding: 5px; width: 12%;">Feast</th>
-        <th style="padding: 5px; width: 12%;">Tecton</th>
-        <th style="padding: 5px; width: 12%;">MLRun</th>
-        <th style="padding: 5px; width: 12%;">SageMaker</th>
-        <th style="padding: 5px; width: 12%;">Vertex AI</th>
-        <th style="padding: 5px; width: 12%;">Databricks</th>
-        <th style="padding: 5px; width: 12%;">HopsWorks</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Código aberto</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Opção gerenciada</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">principais clouds</td>
-        <td style="padding: 5px;">cloud + on-prem</td>
-        <td style="padding: 5px;">na AWS</td>
-        <td style="padding: 5px;">na GCP</td>
-        <td style="padding: 5px;">principais clouds</td>
-        <td style="padding: 5px;">cloud + on-prem</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Pipelines offline</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Pipelines em tempo real</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Recuperação de funcionalidades</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Motores de execução</td>
-        <td style="padding: 5px;">Spark</td>
-        <td style="padding: 5px;">Spark</td>
-        <td style="padding: 5px;">Python, Dask, Spark, Nuclio</td>
-        <td style="padding: 5px;">Nenhum</td>
-        <td style="padding: 5px;">Spark</td>
-        <td style="padding: 5px;">Spark</td>
-        <td style="padding: 5px;">Spark, Flink</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Análise de funcionalidades</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Versionamento e linhagem</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Segurança das funcionalidades</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Monitoramento</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-      <tr>
-        <td style="padding: 5px; white-space: nowrap;">Treinamento e serviço, integrado e automatizado</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Não</td>
-        <td style="padding: 5px;">Sim</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| Categoria                                         | Feast                                    | Tecton            | MLRun                              | SageMaker    | Vertex AI      | Databricks        | HopsWorks            |
+|---------------------------------------------------|------------------------------------------|-------------------|------------------------------------|--------------|----------------|-------------------|----------------------|
+| Código aberto                                     | Sim                                      | Não               | Sim                                | Não          | Não            | Não               | Sim                  |
+| Opção gerenciada                                  | Não                                      | principais clouds | cloud + on-prem                   | na AWS       | na GCP         | principais clouds | cloud + on-prem      |
+| Pipelines offline                                 | Não                                      | Sim               | Sim                                | Não          | Não            | Não               | Sim                  |
+| Pipelines em tempo real                           | Não                                      | Sim               | Sim                                | Não          | Não            | Não               | Não                  |
+| Recuperação de funcionalidades                    | Sim                                      | Sim               | Sim                                | Sim          | Sim            | Sim               | Sim                  |
+| Motores de execução                               | Spark                                    | Spark             | Python, Dask, Spark, Nuclio        | Nenhum       | Spark          | Spark             | Spark, Flink         |
+| Análise de funcionalidades                        | Sim                                      | Não               | Sim                                | Sim          | Não            | Não               | Sim                  |
+| Versionamento e linhagem                          | Não                                      | Sim               | Sim                                | Não          | Não            | Não               | Sim                  |
+| Segurança das funcionalidades                     | Não                                      | Sim               | Sim                                | Sim          | Não            | Não               | Não                  |
+| Monitoramento                                     | Não                                      | Sim               | Sim                                | Não          | Não            | Não               | Sim                  |
+| Treinamento e serviço, integrado e automatizado   | Não                                      | Não               | Sim                                | Não          | Não            | Não               | Sim                  |
 
 ## Feature Store na Arquitetura do Sistema de ML
 

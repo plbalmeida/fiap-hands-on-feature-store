@@ -6,7 +6,7 @@
 
 * [O que é Feature Store?](o_que_e_feature_store.md)
 
-* [Cases]
+* Cases
     * [Overview](cases/overview.md)
     * [Case com Feast](cases/feast/feast_fs.md)
     * [Case com MLRun](cases/mlrun/mlrun_fs.md)

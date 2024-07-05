@@ -4,19 +4,19 @@ As primeiras implementações de Feature Stores vieram de empresas como Uber, Tw
 
 Em uma postagem de 2017 no blog de engenharia da Uber ([https://www.uber.com/en-BR/blog/michelangelo-machine-learning-platform/](https://www.uber.com/en-BR/blog/michelangelo-machine-learning-platform/)), é possível checar alguns relatos sobre o uso de Feature Store na plataforma de ML deles, o Michelangelo.
 
->  *... we added a layer of data management, a feature store that allows teams to share, discover, and use a highly curated set of features for their machine learning problems.  We found that many modeling problems at Uber use identical or similar features, and there is substantial value in enabling teams to share features between their own projects and for teams in different organizations to share features with each other.*
+>  *... adicionamos uma camada de gerenciamento de dados, um Feature Store que permite que as equipes compartilhem, descubram e usem um conjunto de features altamente selecionado para seus problemas de ML. Descobrimos que muitos problemas de modelagem na Uber usam features idênticas ou semelhantes, e há um valor substancial em permitir que as equipes compartilhem features em seus projetos, e que equipes de diferentes projetos compartilhem features entre si.*
 
 E ainda...
 
-> *At the moment, we have approximately 10,000 features in Feature Store that are used to accelerate machine learning projects, and teams across the company are adding new ones all the time. Features in the Feature Store are automatically calculated and updated daily.*
+> *Até o momento, temos aproximadamente 10.000 features no Feature Store que são usadas ​​para acelerar projetos de ML, e as equipes de toda a empresa estão adicionando novas features o tempo todo. As features do Feature Store são calculados automaticamente e atualizados diariamente.*
 
-Feature Stores podem operar como uma fábrica e/ou um repositório central de features para ML, onde dependendo da solução utilizada, é possível realizar gerenciando a coleta de dados brutos de várias fontes, realização de transformações, armazenamento, catalogação, versionamento, segurança, fornecimento e monitoramento de features, entre outras funcionalidades. 
+Feature Stores geralmente operaram como uma fábrica e/ou como um repositório central de features para ML, em que dependendo da solução utilizada de Feature Store, é possível realizar o gerenciamento da coleta de dados brutos de várias fontes, realizar transformações, armazenar, catalogar, versionar, garantir a segurança do dado, servir e monitorar features. 
 
-O Feature Store é um recurso no sistema de ML que possibilita a automatização de processos reduzindo os esforços de engenharia através da criação de um catálogo compartilhado de features prontas para utilização pelos membros do time, permitindo a colaboração e compartilhamento de features entre equipes, com objetivo de acelerar a entrega de sistemas de ML. 
+O Feature Store é um recurso no sistema de ML que possibilita a automatização de processos reduzindo os esforços de engenharia através da criação de um catálogo compartilhado de features prontas para utilização, permitindo a colaboração e compartilhamento de features entre equipes, com objetivo de acelerar a entrega de sistemas de ML. 
 
 ## Provedores de Feature Store
 
-Hoje, existem múltiplas implementações comerciais e de código aberto. Idealmente soluções de Feature Stores avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store (Adaptado de: [Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023](https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/)).
+Hoje, existem múltiplas implementações comerciais e open source de Feature Store. Idealmente soluções de Feature Store avançadas devem oferecer todas as funcionalidade citadas aqui anteriormente. Comparar cuidadosamente as capacidades de diferentes provedores de Feature Stores é essencial, pois algumas soluções podem ter limitações, não fornecendo algumas funcionalidades que podem ser indispensáveis para o contexto do sistema de ML que está sendo desenvolvido. A seguir segue um comparativo de soluções atualmente disponíveis de Feature Store (Adaptado de: [Yaron Haviv, Noah Gift. Implementing MLOps in the Enterprise - A Production-First Approach. O'Reilly Media, Inc. 2023](https://www.oreilly.com/library/view/implementing-mlops-in/9781098136574/)).
 
 | Categoria                                         | Feast                                    | Tecton            | MLRun                              | SageMaker    | Vertex AI      | Databricks        | HopsWorks            |
 |---------------------------------------------------|------------------------------------------|-------------------|------------------------------------|--------------|----------------|-------------------|----------------------|
@@ -34,7 +34,7 @@ Hoje, existem múltiplas implementações comerciais e de código aberto. Idealm
 
 ## Feature Store na Arquitetura do Sistema de ML
 
-A figura a seguir ilustra a arquitetura ideal e membros do time que normalmente usam e interagem com um Feature Store. 
+A figura a seguir ilustra uma arquitetura teórica de um Feature Store, ele ilustra como os dados são ingeridos, transformados e disponibilizados para diferentes pipelines de ML.
 
 <div align="center">
   <figure>
@@ -45,31 +45,20 @@ A figura a seguir ilustra a arquitetura ideal e membros do time que normalmente 
   </figure>
 </div>
 
-> **IMPORTANTE!** Como já foi citado, nem todas as provedoras de Feature Store possuem as funcionalidades do desenho acima, o desenho ilustra uma arquitetura ideal de um serviço de Feature Store. 
+Fluxo:
 
-Nesse sistema de ML, os dados brutos são ingeridos e transformados em features, que são catalogadas e servidas para diferentes aplicações (treinamento e inferência com modelo de ML), permitindo que Cientistas de Dados, Engenheiros de Dados e Engenheiros de ML/MLOps atualizem, recuperem, monitorem e utilizem as features.
+- **Ingestão de Dados**: Os dados são ingeridos de várias fontes, incluindo data lakes, bancos de dados operacionais e fontes em tempo real.
 
-A seguir são descritas as principais componentes de um Feature Store ideal:
+- **Transformação de Dados**: Os dados offline são transformados pelo `Batch Transformer`, enquanto os dados em tempo real são transformados pelo `Stream Transformer`.
 
-1. **Camada de Transformação**: converte dados brutos offline ou online em features e as armazena tanto em um storage online (com chave/valor) quanto offline (objeto).
+- **Armazenamento de Features**: Features transformadas são armazenadas em dois tipos de storages:
+  - `Offline Store` para treinamento e análise.
+  - `Online Store` para inferência em tempo real.
 
-2. **Camada de Armazenamento**: armazena múltiplas versões de uma feature em tabelas de features (conjuntos de features) e gerencia o ciclo de vida dos dados (criação, adição, exclusão, monitoramento e segurança dos dados). A camada de dados armazena cada feature em duas formas: offline para treinamento e análise, e online para inferência e monitoramento.
+- **Recuperação de Features**:
+  - `Offline Retrieval` recupera features para o `Training Pipeline`.
+  - `Online Retrieval` recupera features para o `Serving Pipeline`.
 
-3. **Recuperação de Features**: aceita solicitações para múltiplas features (vetores de features) e outras propriedades (como intervalos de tempo e dados de eventos), produzindo um snapshot de dados offline para treinamento ou um vetor em tempo real para inferência.
+O diagrama mostra como o Feature Store centraliza e gerencia as features de ML, permitindo uma integração eficiente entre as etapas de transformação de dados, armazenamento e recuperação, tanto para treinamento quanto para inferência em tempo real. Isso facilita a construção de pipelines de ML mais robustos e eficientes, garantindo que os modelos sejam alimentados com dados de alta qualidade e atualizados.
 
-4. **Gerenciamento de Metadados e Catalogação**: armazena a definição de features, metadados, rótulos e relações.
-
-Esses componentes trabalham em conjunto para proporcionar uma infraestrutura robusta que suporta todo o ciclo de vida de um sistema de ML, desde a ingestão de dados até a inferência em tempo real e o monitoramento contínuo.
-
-## Data Warehouse X Feature Store
-
-Embora um Data Warehouse tradicional e um Feature Store centralizarem dados de várias fontes para facilitar o acesso e uso para análise, eles têm objetivos distintos. Um Data Warehouse alimenta sistemas de Business Intelligence (BI) para suportar a tomada de decisões estratégicas, enquanto o Feature Store fornece dados processados para sistemas de Machine Learning (ML), como já foi comentado aqui. O Feature Store faz processamento repetitivo de dados, como normalização, limpeza e extração de features relevantes com engenharia de features, visando melhorar os modelos de ML existentes, colaborando com a automação de pipelines de ML, otimizando o desenvolvimento e a implantação de modelos de ML.
-
-<div align="center">
-  <figure>
-    <img src="dw_versus_fs.png" alt="Data Warehouse X Feature Store">
-    <figcaption style="font-size: 12px; font-weight: bold;">
-      Fonte: <a href="https://paiml.com/docs/home/books/practical-mlops/" style="font-size: 14px; font-weight: bold;">Noah Gift, Alfredo Deza. Practical Mlops - Operationalizing Machine Learning Models. O'Reilly Media, Inc. 2021</a>
-    </figcaption>
-  </figure>
-</div>
+> **IMPORTANTE!** Como já foi citado, nem todas as provedoras de Feature Store possuem as funcionalidades do desenho acima, o desenho ilustra uma arquitetura teórica de um serviço de Feature Store. Alguns provedores tem foco somente na catalogação e não possuem funcionalidade de automatização do processo de ingestão ou transformação, que são as tarefas mais trabalhosas.
